@@ -217,6 +217,7 @@ const PageContainer = styled.div`
    padding: 1rem;
    background-color: #f9f9f9;
    min-height: 100vh;
+   padding-bottom: 100px;
 `;
 
 const Header = styled.header`

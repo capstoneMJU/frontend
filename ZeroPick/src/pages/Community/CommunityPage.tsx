@@ -56,6 +56,23 @@ const CommunityPage: React.FC = () => {
       setHasMore(true);
    }, [activeCategory]);
 
+   useEffect(() => {
+      const handlePageShow = () => {
+      setPosts([]);
+      setPage(0);
+      setHasMore(true);
+   };
+
+   window.addEventListener('pageshow', handlePageShow);
+      return () => window.removeEventListener('pageshow', handlePageShow);
+   }, []);
+   useEffect(() => {
+      if (page === 0) {
+      fetchPosts();
+   }
+   }, [page, fetchPosts]);
+
+
    const lastPostRef = useCallback(
       (node: HTMLDivElement) => {
          if (observerRef.current) observerRef.current.disconnect();
