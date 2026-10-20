@@ -1,54 +1,19 @@
-# React + TypeScript + Vite
+# ZeroPick 애플리케이션
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이 디렉터리는 제로픽 React + TypeScript + Vite 앱의 실행 루트입니다.
 
-Currently, two official plugins are available:
+전체 기능, 설치·실행, 개발 API 프록시, 라우트, API 호출 목록, 상태 관리, 배포 및 협업 규칙은 [저장소 README](../README.md)를 확인하세요.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-   extends: [
-      // Remove ...tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-   ],
-   languageOptions: {
-      // other options...
-      parserOptions: {
-         project: ['./tsconfig.node.json', './tsconfig.app.json'],
-         tsconfigRootDir: import.meta.dirname,
-      },
-   },
-});
+```sh
+yarn install --frozen-lockfile
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+현재 Vite 개발 프록시는 비활성화되어 있습니다. API 기능을 사용하려면 상위 README의 로컬 실행 설정을 먼저 적용하세요.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config({
-   plugins: {
-      // Add the react-x and react-dom plugins
-      'react-x': reactX,
-      'react-dom': reactDom,
-   },
-   rules: {
-      // other rules...
-      // Enable its recommended typescript rules
-      ...reactX.configs['recommended-typescript'].rules,
-      ...reactDom.configs.recommended.rules,
-   },
-});
-```
+| 명령 | 용도 |
+| --- | --- |
+| `yarn dev` | 개발 서버 |
+| `yarn build` | TypeScript 검사 및 프로덕션 빌드 |
+| `yarn lint` | ESLint 검사 |
+| `yarn preview` | 빌드 결과 미리보기 |
