@@ -1,19 +1,12 @@
-# ZeroPick 애플리케이션
+# ZeroPick 프런트엔드
 
-이 디렉터리는 제로픽 React + TypeScript + Vite 앱의 실행 루트입니다.
+React · TypeScript 기반 제로픽 애플리케이션 소스입니다.
 
-전체 기능, 설치·실행, 개발 API 프록시, 라우트, API 호출 목록, 상태 관리, 배포 및 협업 규칙은 [저장소 README](../README.md)를 확인하세요.
+프로젝트의 주요 기술과 실제 구현 흐름은 [저장소 README](../README.md)에 정리되어 있습니다.
 
-```sh
-yarn install --frozen-lockfile
-yarn dev
-```
-
-현재 Vite 개발 프록시는 비활성화되어 있습니다. API 기능을 사용하려면 상위 README의 로컬 실행 설정을 먼저 적용하세요.
-
-| 명령 | 용도 |
-| --- | --- |
-| `yarn dev` | 개발 서버 |
-| `yarn build` | TypeScript 검사 및 프로덕션 빌드 |
-| `yarn lint` | ESLint 검사 |
-| `yarn preview` | 빌드 결과 미리보기 |
+- 이미지 크롭과 OCR 실패 시 품목제조보고번호 수동 조회
+- 검색어별 캐시와 스크롤 기반 식품 추가 조회
+- 영양성분 데이터 변환과 공통 결과 컴포넌트
+- 레시피 추천·상세 생성과 세션 내 결과 재사용
+- 이미지·JSON multipart 게시글과 댓글·대댓글 상태 관리
+- 쿠키 인증 공통 요청, 폼 검증, 사용자 상태와 화면 전환
